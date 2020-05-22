@@ -1,0 +1,77 @@
+.portfolio {
+  background-color: $wheat;
+  &-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__title {
+
+  }
+  &__subtitle {
+    font-size: 18px;
+  }
+  &-groups {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+  }
+  &__group {
+    text-align: center;
+  }
+  &__category {
+    @include light;
+
+  }
+  &__list {
+
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    height: 500px * 0.5625;
+    border: 1px solid $black;
+  }
+  &__description {
+    background-color: rgba($black, 0.7);
+    margin: auto;
+    width: 500px;
+    height: 500px * 0.5625;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+  &:hover {
+    opacity: 1;
+  }
+  }
+  &__name {
+    color: $white;
+  }
+  &__button {
+    transition: 0.4s;
+    border: 1px solid $black;
+    @include regular;
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+
+}
+
+#repair {
+    background-image: url("../img/portfolio/repair.jpg");
+  background-size: 100%;
+}
+
+#wordpress-site {
+  background-image: url("../img/portfolio/wordpress-site.png");
+  background-size: 100%;
+}

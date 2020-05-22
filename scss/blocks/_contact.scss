@@ -1,0 +1,97 @@
+.contact {
+  background-color: $wheat;
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__{
+    &social{
+      display: flex;
+      flex-direction: column;
+      width: 700px;
+
+    }
+    &title{
+
+      text-align: center;
+    }
+    &text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 22px;
+    }
+    &links{
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 50px;
+    }
+    &link {
+      font-size: 40px;
+    }
+    &form {
+      border-radius: 30px;
+      width: 300px;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+
+
+    }
+    &input {
+      width: 260px;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-bottom: 1px solid rgba($black, 0.25);
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      &:focus {
+        outline: none;
+      }
+
+
+    }
+    &textarea {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      padding: 15px;
+      border-bottom: 1px solid rgba($black, 0.25);
+      border-top: none;
+      border-right: none;
+      border-left: 1px solid rgba($black, 0.25);;
+      resize: none;
+      &:focus {
+      outline: none;
+      }
+    }
+    &button {
+      background-color: $black;
+      color: $white;
+      padding-left: 50px;
+      padding-right: 50px;
+      border: none;
+      @include regular;
+
+      transition: 0.5s;
+      &:hover {
+        background-color: $main-color;
+        color: $white;
+        width: 292px;
+      }
+      &:active {
+        background-color: $black;
+        color: $white;
+      }
+
+
+    }
+  }
+
+}

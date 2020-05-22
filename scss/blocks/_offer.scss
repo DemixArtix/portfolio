@@ -1,0 +1,26 @@
+.offer {
+  &-block {
+      display: flex;
+    flex-direction: column;
+  }
+  &__title{
+    align-self: center;
+
+  }
+  &__list {
+
+  }
+  &__item {
+
+  }
+  &__text {
+      span {
+        color: $main-color;
+      }
+  }
+  &__button {
+    align-self: flex-start;
+    display: block;
+    @include regular;
+  }
+}

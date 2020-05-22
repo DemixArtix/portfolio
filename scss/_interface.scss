@@ -1,0 +1,154 @@
+
+
+@mixin light {
+  font-family: "Raleway Light", sans-serif;
+  font-weight: 300;
+}
+
+@mixin regular {
+  font-family: "Lato Regular", sans-serif;
+  font-weight: 400;
+}
+
+@mixin bold {
+  font-family: "Raleway Bold", sans-serif;
+  font-weight: 700;
+}
+
+@mixin extra {
+  font-family: "Raleway Extra Bold", sans-serif;
+  font-weight: 800;
+}
+
+@mixin black {
+  font-family: "Raleway Black", sans-serif;
+  font-weight: 900;
+}
+
+
+body {
+  box-sizing: border-box;
+  @include light;
+  position: relative;
+}
+
+ul {
+list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+
+    cursor: pointer;
+  }
+}
+
+i {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+}
+
+.fa-{
+  &whatsapp {
+    color: #29C44D;
+  }
+  &vk {
+    color: #5181B8;
+  }
+  &envelope {
+    color: #C5221F;
+  }
+  &mobile {
+    color: $black;
+  }
+  &github {
+    color: #333333;
+  }
+  &arrow-circle- {
+    &left, &right {
+      font-size: 42px;
+      color: rgba($black, 0.25);
+      transition: 0.3s;
+      &:hover {
+        color: rgba($main-color, 1);
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section-title {
+  @include light;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+    @include light;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.section-button {
+  font-size: 18px;
+  padding: 20px;
+  @include light;
+  background-color: $white;
+  border: 2px solid rgba($black, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    padding-left: 40px;
+    padding-right: 40px;
+    color: $white;
+    background-color: $black;
+
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.section-link {
+  z-index: 1;
+position: relative;
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+  color: $black;
+  @include regular;
+  &:hover {
+    &:after {
+      transition: 0.5s;
+      width: 100%;
+      left: 0;
+      right: 0;
+      border-radius: 20px;
+    }
+  }
+  &:after {
+    content: '';
+    z-index: -1;
+    background-color: rgba($black, 0.25);
+    position: absolute;
+    display: block;
+    text-align: center;
+    left: 50%;
+    bottom: -4px;
+    height: 4px;
+    width: 0;
+  }
+}
+

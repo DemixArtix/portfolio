@@ -1,0 +1,94 @@
+.modal {
+  z-index: 6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.5);
+  transition: 0.3s;
+  display: none;
+  &_active {
+    display: flex;
+  }
+  &__{
+    &dialog {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 100px auto auto;
+      width: 90%;
+      max-width: 1200px;
+      min-width: 800px;
+      background-color: $white;
+      padding: 30px;
+    }
+    &close {
+      position: absolute;
+      font-size: 60px;
+      border: none;
+      background: none;
+      right: 20px;
+      top: 0;
+      color: rgba($black, 0.25);
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        color: rgba($black, 1);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    &slider {
+      width: 1000px;
+
+    }
+    &description {
+      margin-left: 30px;
+
+    }
+    &title {
+      font-size: 24px;
+      margin-bottom: 30px;
+
+    }
+    &subtitle {
+
+    }
+    &text {
+
+    }
+    &buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    &link {
+
+      @include regular;
+      padding: 22px 40px 20px;
+      background-color: rgba($black, 0.75);
+      color: $white;
+      text-transform: uppercase;
+      transition: 0.3s;
+      &:hover {
+        background-color: rgba($black, 1);
+      }
+    }
+    &button {
+      @include regular;
+      padding: 22px 40px 20px;
+      background-color: rgba($main-color, 0.75);
+      color: $white;
+      text-transform: uppercase;
+      border: none;
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($main-color, 1);
+      }
+
+    }
+  }
+}

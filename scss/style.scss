@@ -1,0 +1,25 @@
+@import "normalize";
+@import "fonts";
+@import "colors";
+@import "interface";
+@import "slick";
+
+//импорт шапки
+@import "blocks/header";
+
+//импорт блока offer
+@import "blocks/offer";
+
+//импорт блока portfolio
+@import "blocks/portfolio";
+
+//импорт блока feedback
+@import "blocks/feedback";
+
+//импорт блока contact
+@import "blocks/contact";
+
+//импорт блока contact
+@import "blocks/modal";
+
+
